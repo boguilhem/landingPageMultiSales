@@ -7,10 +7,10 @@ const Welcome = () => {
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <h1>Melhor agência de marketing do bairro</h1>
+        <h1>Melhor plataforma de Multichannel sales</h1>
         <p>
-          Somos uma agência de performance digital, aceleramos vendas e aquisição de leads
-          para grandes marcas.
+          Somos uma empresa de performance digital em marketplaces, aceleramos vendas e
+          marketing para pequenos e grandes comerciantes.
         </p>
         <Button title="Aumentar vendas" kind="secondary" />
       </div>

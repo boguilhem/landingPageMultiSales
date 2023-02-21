@@ -11,9 +11,9 @@ const Header = () => {
         <Image src={Logo} alt="Logo" />
       </div>
       <div className={styles.menu}>
-        <Link href="/">Home</Link>
+        {/* <Link href="/">Home</Link>
         <Link href="/">O que fazemos</Link>
-        <Link href="/">Cases</Link>
+        <Link href="/">Cases</Link> */}
       </div>
       <div className={styles.action}>
         <Button title="Fale conosco" kind="primary" />
