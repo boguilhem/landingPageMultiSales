@@ -1,0 +1,66 @@
+@import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/responsive.scss';
+@import '/src/styles/mixins/fonts.scss';
+
+.button {
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+
+  &.primary {
+    @include sizeSmall;
+    padding: 1rem 3.125rem;
+    background-color: $green-color;
+    color: $white-color;
+
+    @include Tablet {
+      padding: 1rem 2rem;
+    }
+
+    @include Laptop {
+      padding: 1rem 2rem;
+    }
+  }
+
+  &.secondary {
+    @include sizeMedium;
+    padding: 1.25rem 4.375rem;
+    background-color: $white-color;
+    color: $purple-color;
+
+    @include Phone {
+      padding: 1rem 3rem;
+    }
+
+    @include Tablet {
+      padding: 1rem 3rem;
+    }
+
+    @include Laptop {
+      padding: 1rem 3rem;
+    }
+  }
+
+  &.full {
+    @include sizeMedium;
+    padding: 1.375rem;
+    width: 100%;
+    font-weight: 500;
+    background-color: $green3-color;
+    color: $white2-color;
+    border-radius: 8px;
+
+    @include Phone {
+      padding: 1rem;
+    }
+
+    @include Tablet {
+      padding: 1.25rem;
+    }
+
+    @include Laptop {
+      padding: 1.25rem;
+    }
+  }
+}

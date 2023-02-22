@@ -1,0 +1,93 @@
+@import '/src/styles/mixins/padding.scss';
+@import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/responsive.scss';
+@import '/src/styles/mixins/fonts.scss';
+
+.container {
+  @include Padding;
+  padding-top: 2.125rem;
+  padding-bottom: 2.125rem;
+  width: 100%;
+  background-color: $purple-color;
+  border-bottom: 0.5px solid $gray-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+
+  @include Phone {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @include Tablet {
+    padding: 1.5rem 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include Laptop {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.logotipo {
+  width: max-content;
+  img {
+    @include Phone {
+      width: 100px;
+      height: 60px;
+    }
+
+    @include Tablet {
+      width: 140px;
+      height: 60px;
+    }
+
+    @include Laptop {
+      width: 170px;
+      height: 70px;
+    }
+  }
+}
+
+.menu {
+  font-size: 22px;
+  color: $white-color;
+
+  a + a {
+    margin-left: 38.9px;
+  }
+
+  @include Phone {
+    display: none;
+  }
+
+  @include Tablet {
+    font-size: 1.25rem;
+    // margin-left: -2rem;
+    a + a {
+      margin-left: 2rem;
+    }
+  }
+
+  @include Laptop {
+    font-size: 1.375rem;
+    margin-left: -2.5rem;
+    a + a {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.action {
+  text-align: end;
+
+  @include Phone {
+    display: none;
+  }
+
+  @include Tablet {
+    display: none;
+  }
+}

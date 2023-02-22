@@ -1,0 +1,193 @@
+@import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/padding.scss';
+@import '/src/styles/mixins/responsive.scss';
+@import '/src/styles/mixins/fonts.scss';
+
+.container {
+  @include Padding;
+  margin-bottom: 16rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    @include sizeLarge;
+    width: 56rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 5.125rem;
+    margin-bottom: 2.625rem;
+  }
+
+  p {
+    @include sizeNormal;
+    width: 56rem;
+    text-align: center;
+    font-weight: lighter;
+    line-height: 2.625rem;
+    opacity: 0.8;
+    margin-bottom: 4.75rem;
+  }
+
+  @include Phone {
+    margin-bottom: 5rem;
+
+    h1 {
+      width: 100%;
+      line-height: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      width: 100%;
+      line-height: 1.25rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include Tablet {
+    margin-bottom: 5rem;
+
+    h1 {
+      width: 100%;
+      line-height: 3rem;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      width: 100%;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include Laptop {
+    margin-bottom: 6rem;
+
+    h1 {
+      width: 100%;
+      line-height: 4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      width: 80%;
+      line-height: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.features {
+  padding-top: 2.625rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.25rem;
+
+  @include Phone {
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+    gap: 2rem;
+  }
+
+  @include Tablet {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1rem;
+    gap: 2rem;
+  }
+
+  @include Laptop {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1rem;
+    gap: 3rem;
+  }
+}
+
+.feature {
+  width: 31.75rem;
+  padding: 2.125rem 2.25rem;
+  background-color: $white-color;
+  border-radius: 5px;
+
+  h1 {
+    @include sizeMediumLarge;
+    font-weight: bold;
+    line-height: 3.125rem;
+    color: $purple2-color;
+    width: auto;
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    @include sizeSmall;
+    font-weight: lighter;
+    line-height: 1.875rem;
+    color: $dark-gray-color;
+    width: auto;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  @include Phone {
+    width: 100%;
+    padding: 1.125rem 1.25rem;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    h1 {
+      line-height: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+
+  @include Tablet {
+    width: 100%;
+    padding: 1.125rem 1.125rem;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    h1 {
+      line-height: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      line-height: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+
+  @include Laptop {
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    h1 {
+      line-height: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+}

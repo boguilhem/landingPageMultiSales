@@ -1,0 +1,142 @@
+@import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/padding.scss';
+@import '/src/styles/mixins/responsive.scss';
+@import '/src/styles/mixins/fonts.scss';
+
+.container {
+  @include Padding;
+  padding-top: 12rem;
+  height: 100vh;
+  background-image: url('/images/fundoWelcome.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include Phone {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    padding-top: 2rem;
+    height: 100%;
+    margin-bottom: 5rem;
+  }
+
+  @include Tablet {
+    grid-template-columns: 1fr;
+    padding-top: 3rem;
+    height: 100%;
+    margin-bottom: 6rem;
+  }
+
+  @include Laptop {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    padding-top: 10rem;
+    margin-bottom: 0rem;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.text {
+  h1 {
+    @include sizeExtra;
+    color: $white-color;
+    font-weight: bold;
+    line-height: 5.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  p {
+    @include sizeNormal;
+    color: $white-color;
+    font-weight: lighter;
+    line-height: 2.625rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+  }
+
+  @include Phone {
+    h1 {
+      margin-bottom: 1rem;
+      line-height: 2.625rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  @include Tablet {
+    text-align: center;
+    h1 {
+      margin-bottom: 1.5rem;
+      line-height: 3.5rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  @include Laptop {
+    h1 {
+      margin-bottom: 1.75rem;
+      line-height: 4.25rem;
+    }
+
+    p {
+      margin-bottom: 1.75rem;
+      line-height: 2.25rem;
+    }
+  }
+}
+
+.image {
+  text-align: end;
+
+  img {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include Phone {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+      width: 320px;
+      height: auto;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  @include Tablet {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+      width: 60%;
+      height: auto;
+      padding-bottom: 1rem;
+    }
+  }
+
+  @include Laptop {
+    text-align: end;
+    padding-top: 1.5rem;
+
+    img {
+      width: 85%;
+      min-width: 25rem;
+      max-width: 30rem;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

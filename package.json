@@ -1,5 +1,5 @@
 {
-  "name": "landingpage-nextjs",
+  "name": "landingpageMultiSales",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,13 +10,18 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "axios": "^1.3.3",
+    "emailjs": "^4.0.1",
+    "formik": "^2.2.9",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "yup": "^1.0.0"
   },
   "devDependencies": {
-    "sass": "^1.58.3",
     "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6"
+    "eslint-config-next": "13.1.6",
+    "sass": "^1.58.3"
   }
 }

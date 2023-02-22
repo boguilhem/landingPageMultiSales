@@ -1,0 +1,135 @@
+@import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/padding.scss';
+@import '/src/styles/mixins/responsive.scss';
+@import '/src/styles/mixins/fonts.scss';
+
+.container {
+  @include Padding;
+  padding-top: 6rem;
+  background-color: $purple3-color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 23rem;
+  align-items: center;
+
+  @include Phone {
+    padding-top: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 0rem;
+  }
+
+  @include Tablet {
+    padding-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+
+  @include Laptop {
+    padding-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+.column {
+  &.columnPrincipal {
+    margin-top: 0;
+    grid-row: span 2;
+  }
+
+  h1 {
+    @include sizeMedium;
+    padding: 1rem 0;
+    font-weight: 500;
+    line-height: 2rem;
+    color: $green2-color;
+    text-transform: uppercase;
+  }
+
+  p {
+    @include sizeNormal;
+    line-height: 2rem;
+  }
+
+  @include Phone {
+    margin-top: 0rem;
+
+    img {
+      width: 120px;
+      height: 60px;
+    }
+
+    h1 {
+      line-height: 1rem;
+    }
+
+    p {
+      line-height: 2rem;
+    }
+  }
+
+  @include Tablet {
+    margin-top: 0rem;
+
+    img {
+      width: 120px;
+      height: 60px;
+    }
+
+    h1 {
+      line-height: 1rem;
+    }
+
+    p {
+      line-height: 2rem;
+      padding: 0.25rem 0;
+    }
+  }
+
+  @include Laptop {
+    margin-top: 1.25rem;
+
+    img {
+      width: 140px;
+      height: 60px;
+    }
+
+    h1 {
+      line-height: 1.25rem;
+    }
+
+    p {
+      line-height: 2rem;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.allRightsReserved {
+  padding: 2rem 0 2.875rem 0;
+  grid-column: 2;
+  p {
+    @include sizeSmall;
+    color: $gray4-color;
+    letter-spacing: 0.6px;
+    text-align: left;
+  }
+
+  @include Phone {
+    padding: 2rem 0 2.5rem 0;
+    grid-column: 1;
+  }
+
+  @include Tablet {
+    padding: 1.5rem 0 1.5rem 0;
+    grid-column: 2;
+  }
+
+  @include Laptop {
+    padding: 2rem 0 3rem 0;
+    grid-column: 2;
+  }
+}
