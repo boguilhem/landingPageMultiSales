@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SigmaSails from '@/public/images/SigmaSails1.png';
+import SigmaSails from '@/public/images/SigmaSails.png';
 import styles from './header.module.scss';
 import Button from '../button';
 import { scrollTo } from '@/src/utils/scrollTo';

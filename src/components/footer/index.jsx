@@ -1,13 +1,12 @@
 import Image from 'next/image';
 // import Logo from '@/public/images/logo.svg';
-import SigmaSails from '@/public/images/SigmaSails1.png';
+import SigmaSails from '@/public/images/SigmaSails.png';
 import styles from './footer.module.scss';
 
 const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={`${styles.column} ${styles.columnPrincipal}`}>
-        {/* <Image width={200} height={60} src={Logo} alt="Logo" /> */}
         <Image src={SigmaSails} alt="Logo" />
       </div>
       <div className={styles.column}>
