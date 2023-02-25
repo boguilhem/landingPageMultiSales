@@ -5,7 +5,8 @@
 
 .container {
   @include Padding;
-  padding-top: 12rem;
+  padding-top: 8rem;
+  margin-bottom: 6rem;
   height: 100vh;
   background-image: url('/images/fundoWelcome.svg');
   background-repeat: no-repeat;
@@ -38,6 +39,7 @@
 }
 
 .text {
+  min-width: 40rem;
   h1 {
     @include sizeExtra;
     color: $white-color;
@@ -56,6 +58,7 @@
   }
 
   @include Phone {
+    min-width: 18.75rem;
     h1 {
       margin-bottom: 1rem;
       line-height: 2.625rem;
@@ -68,6 +71,7 @@
   }
 
   @include Tablet {
+    min-width: 28rem;
     text-align: center;
     h1 {
       margin-bottom: 1.5rem;
