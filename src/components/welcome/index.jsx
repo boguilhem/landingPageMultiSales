@@ -1,21 +1,19 @@
 import { useState, useEffect } from 'react';
 import styles from './welcome.module.scss';
 import Button from '../button';
-// import BannerWelcome from '@/public/images/bannerWelcome.svg';
-// import Image from 'next/image';
 import { scrollTo } from '@/src/utils/scrollTo';
-import { updateSales } from '@/src/utils/scrollTo';
+import { salesCounter } from '@/src/utils/salesCounter';
 
 const Welcome = () => {
   const [vendas, setVendas] = useState(1223);
 
-  const updateSales2 = (vendas) => {
-    updateSales(vendas);
+  const updateSales = (vendas) => {
+    salesCounter(vendas);
     setVendas(vendas + 1);
   };
 
   useEffect(() => {
-    const sales = setInterval(() => updateSales2(vendas), 1500);
+    const sales = setInterval(() => updateSales(vendas), 1500);
     return () => clearInterval(sales);
   }, [vendas]);
 
