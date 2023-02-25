@@ -59,10 +59,10 @@ const Contato = () => {
       <div className={styles.container} id="contato">
         <div className={styles.texts}>
           <span>entre em contato</span>
-          <h1>Aumente seu resultado de vendas e performance</h1>
+          <h1>Aumente seu resultado de vendas!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna
+            Se inscreva agora para demonstrar o seu interesse em participar do nosso
+            projeto!
           </p>
         </div>
         <div className={styles.form}>
@@ -73,7 +73,7 @@ const Contato = () => {
               id="email"
               name="email"
               type="email"
-              placeholder="Coloque seu melhor Email"
+              placeholder="Coloque seu melhor Email!"
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.email}

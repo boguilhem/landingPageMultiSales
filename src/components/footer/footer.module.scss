@@ -5,7 +5,8 @@
 
 .container {
   @include Padding;
-  padding-top: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: $purple3-color;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -15,6 +16,7 @@
 
   @include Phone {
     padding-top: 1rem;
+    padding-bottom: 2rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     column-gap: 0rem;
@@ -38,6 +40,12 @@
   &.columnPrincipal {
     margin-top: 0;
     grid-row: span 2;
+
+    img {
+      object-fit: contain;
+      width: 150px;
+      height: 120px;
+    }
   }
 
   h1 {
@@ -55,11 +63,16 @@
   }
 
   @include Phone {
-    margin-top: 0rem;
+    margin-top: 1rem;
 
-    img {
-      width: 120px;
-      height: 60px;
+    &.columnPrincipal {
+      margin-top: 0;
+      grid-row: span 2;
+
+      img {
+        width: 100px;
+        height: 80px;
+      }
     }
 
     h1 {
@@ -74,9 +87,14 @@
   @include Tablet {
     margin-top: 0rem;
 
-    img {
-      width: 120px;
-      height: 60px;
+    &.columnPrincipal {
+      margin-top: 0;
+      grid-row: span 2;
+
+      img {
+        width: 120px;
+        height: 96px;
+      }
     }
 
     h1 {
@@ -92,9 +110,14 @@
   @include Laptop {
     margin-top: 1.25rem;
 
-    img {
-      width: 140px;
-      height: 60px;
+    &.columnPrincipal {
+      margin-top: 0;
+      grid-row: span 2;
+
+      img {
+        width: 140px;
+        height: 112px;
+      }
     }
 
     h1 {
@@ -109,7 +132,7 @@
 }
 
 .allRightsReserved {
-  padding: 2rem 0 2.875rem 0;
+  padding-top: 2rem;
   grid-column: 2;
   p {
     @include sizeSmall;
@@ -119,17 +142,18 @@
   }
 
   @include Phone {
-    padding: 2rem 0 2.5rem 0;
+    padding-top: 1rem;
     grid-column: 1;
   }
 
   @include Tablet {
-    padding: 1.5rem 0 1.5rem 0;
+    padding-top: 1rem;
     grid-column: 2;
   }
 
   @include Laptop {
-    padding: 2rem 0 3rem 0;
+    align-self: start;
+    padding-top: 1rem;
     grid-column: 2;
   }
 }

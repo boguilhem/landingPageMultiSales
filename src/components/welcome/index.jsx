@@ -8,10 +8,10 @@ const Welcome = () => {
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <h1>Melhor plataforma de Multichannel sales</h1>
+        <h1>Melhor plataforma de Multichannel sales nacional</h1>
         <p>
-          Somos uma empresa de performance digital em marketplaces, aceleramos vendas e
-          marketing para pequenos e grandes comerciantes.
+          Somos uma empresa de performance digital em marketplaces, facilitamos marketing
+          e vendas para pequenos e grandes comerciantes.
         </p>
         <Button
           title="Aumentar vendas"
