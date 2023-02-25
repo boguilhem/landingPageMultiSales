@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './welcome.module.scss';
 import Button from '../button';
 import { scrollTo } from '@/src/utils/scrollTo';
-import { salesCounter } from '@/src/utils/salesCounter';
+import { salesCounter, setSalesCount } from '@/src/utils/salesCounter';
 
 const Welcome = () => {
   const [vendas, setVendas] = useState(1223);
@@ -13,7 +13,11 @@ const Welcome = () => {
   };
 
   useEffect(() => {
-    const sales = setInterval(() => updateSales(vendas), 1500);
+    setVendas(setSalesCount(vendas));
+  }, []);
+
+  useEffect(() => {
+    const sales = setInterval(() => updateSales(vendas), 10000);
     return () => clearInterval(sales);
   }, [vendas]);
 
@@ -21,12 +25,6 @@ const Welcome = () => {
     <div className={styles.container}>
       <div className={styles.text}>
         <h1>Melhor plataforma de Multichannel sales nacional</h1>
-        {/* <svg height="30" width="200">
-          <text id="Vendas" x="0" y="15" fill="red">
-            I love SVG!
-          </text>
-          Sorry, your browser does not support inline SVG.
-        </svg> */}
         <p>
           Somos uma empresa de performance digital em marketplaces, facilitamos marketing
           e vendas para pequenos e grandes comerciantes.
@@ -36,7 +34,6 @@ const Welcome = () => {
           kind="secondary"
           type="button"
           onClick={() => scrollTo('contato')}
-          // onClick={() => updateSales2(vendas)}
         />
       </div>
       <div className={styles.image}>
@@ -144,9 +141,7 @@ const Welcome = () => {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Open Sans', 'Helvetica Neue', sans-serif"
               fontWeight="500"
             >
-              <tspan x="0" y="0">
-                1.223
-              </tspan>
+              <tspan x="0" y="0"></tspan>
             </text>
             <g id="Grupo_2097" data-name="Grupo 2097" transform="translate(1486.087 656)">
               <path
