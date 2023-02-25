@@ -5,6 +5,28 @@ import Image from 'next/image';
 import { scrollTo } from '@/src/utils/scrollTo';
 
 const Welcome = () => {
+  const updateSales = () => {
+    const initialNumber = 1200;
+    let salesNumber = initialNumber;
+    let timeleft = 10;
+    var downloadTimer = setInterval(function () {
+      if (timeleft <= 0) {
+        salesNumber++;
+      }
+      document.getElementById('progressBar').value = 10 - timeleft;
+      timeleft -= 1;
+    }, 1000);
+  };
+
+  // var timeleft = 10;
+  // var downloadTimer = setInterval(function () {
+  //   if (timeleft <= 0) {
+  //     clearInterval(downloadTimer);
+  //   }
+  //   document.getElementById('progressBar').value = 10 - timeleft;
+  //   timeleft -= 1;
+  // }, 1000);
+
   return (
     <div className={styles.container}>
       <div className={styles.text}>
