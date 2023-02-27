@@ -1,11 +1,13 @@
 import '@/src/styles/globals.scss';
 import { Analytics } from '@vercel/analytics/react';
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <Analytics />
     </>
   );
 }
+
+export default App;
